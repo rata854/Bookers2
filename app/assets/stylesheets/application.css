@@ -36,3 +36,7 @@ nav ul li {
     display: inline-block;
     margin-right: 25px;
 }
+
+footer {
+  text-align: center;
+}

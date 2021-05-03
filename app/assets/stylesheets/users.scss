@@ -1,3 +1,22 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main-content{
+  width: 840px; /* 横幅840px */
+  height: 1400px; /* 高さ1400px（多めに設定） */
+  display: flex; /* Flexboxの利用 */
+  justify-content: center; /* 子要素の横並び・中央寄せ */
+  margin: 0 auto; /* 中央寄せ（左右に余白がないとできない） */
+}
+
+.icom_post {
+  width: 200px; /* 横幅600px */
+  height: 626px; /* 高さ600px */
+  background-color: limegreen; /* 背景色limegreen */
+}
+
+.posts_list {
+  width: 470px; /* 横幅240px */
+  height: 626px; /* 高さ600px */
+}
