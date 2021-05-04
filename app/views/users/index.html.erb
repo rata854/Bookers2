@@ -1,9 +1,41 @@
 <main>
   <div class="main-content">
-    <div class="icom_post"></div>
+    <div class="icom_post">
+      <h2>Usre info</h2>
+
+        
+      <h2>New book</h2>
+      
+    </div>
+    
+    
+    
     <div class="posts_list">
       <h2>Books</h2>
-      
+      <table>
+          <thead>
+            <tr>
+              <th>image</th>
+              <th>name</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% @users.each do |user| %>
+          	<tr> 
+          	<td>
+          	<%= user.profile_image_id %>
+          	</td>
+          	<td>
+          	<%= user.name %>
+          	</td>
+          	<td>
+            <%= link_to "Show", user_path(user.id) %>
+            </td>
+          	</tr>
+          <% end %>
+          </tbody>
+        </table>
     </div>
   </div>
 </main>
