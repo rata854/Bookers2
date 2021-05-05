@@ -4,5 +4,15 @@
 </p>
 <p>about various books!</p>
 
-<%= link_to "login", new_user_session_path %>
-<%= link_to "sin up", new_user_registration_path %>
+
+
+  <%=link_to("new_user_session_path") do %>
+    <button type="button" class="btn btn-info w-50 mt-2">Log in</button>
+  <% end %>
+  <br>
+  <br>
+  <%=link_to("new_user_registration_path") do %>
+    <button type="button" class="btn btn-success w-50 mt-2">Sign up</button>
+  <% end %>
+
+
