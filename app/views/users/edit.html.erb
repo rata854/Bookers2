@@ -1,4 +1,3 @@
-<main>
  <p id="notice"></p>
  <div class='container'>
   <div class='row'>
@@ -7,20 +6,21 @@
     <%= form_with model: @user, local:true do |f| %>
      <div class="form-group">
        <label for="user_name">Name</label>
-       <%= f.text_field :name %>
+       <%= f.text_field :name, class: "form-control name" %>
      </div>
      <div class="form-group">
        <label for="user_image">Image</label>
-       <%= f.attachment_field :image %>
+       <%= f.attachment_field :profile_image, class: "form-control-file user_image" %>
      </div>
      <div class="form-group">
        <label for="user_introduction">Introduction</label>
-       <%= f.text_area :introduction %>
+       <%= f.text_area :introduction, class: "form-control introduction" %>
      </div>
      <div class="form-group">
-        <%= f.submit 'Update User' %>
+        <%= f.submit 'Update User', class: "btn btn-secondary" %>
      </div>
+     <% end %>
    </div>
   </div>
  </div>
-</main>
+

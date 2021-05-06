@@ -14,7 +14,7 @@ class BooksController < ApplicationController
     if @book.save
     redirect_to book_path(@book.id), notice:"successfully saved"
     else
-      render :books_path
+      render template: "books/index"
     end
   end
 
