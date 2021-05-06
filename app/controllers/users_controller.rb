@@ -4,8 +4,10 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @user = current_user.id
-    @user = current_user.name
+    @user_name = current_user.name
     @user_introduction = current_user.introduction
+    
+
   end
   
   def new
