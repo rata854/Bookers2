@@ -1,41 +1,38 @@
-<main>
-  <div class="main-content">
-    <div class="icom_post">
-      <h2>Usre info</h2>
-
-        
-      <h2>New book</h2>
+ <main>
+  <p id="notice">Welcome! You have signed up successfully.</p>
+  <div class='container px-5 px-sm-0'>
+   <div class='row'>
+    <div class='col-md-3'>
+      <h2>User info</h2>
+      <table class='table'>
+       <tr>image</tr>
+       <tr>
+  	     <th>name</th>
+  	     <th><%= @user %></th>
+       </tr>
+       <tr>
+    	  <th>introduction</th>
+    	  <th><%= @user_introduction %></th>
+       </tr>
+      </table>
+      <%= link_to  edit_user_path(@user), class: 'btn btn-outline-secondary btn-block' do %>
+        <i class="fa fa-user-cog"></i>
+      <% end %>
       
-    </div>
-    
-    
-    
-    <div class="posts_list">
-      <h2>Books</h2>
-      <table>
-          <thead>
-            <tr>
-              <th>image</th>
-              <th>name</th>
-              <th>&nbsp;</th>
-            </tr>
-          </thead>
-          <tbody>
-          <% @users.each do |user| %>
-          	<tr> 
-          	<td>
-          	<%= user.profile_image_id %>
-          	</td>
-          	<td>
-          	<%= user.name %>
-          	</td>
-          	<td>
-            <%= link_to "Show", user_path(user.id) %>
-            </td>
-          	</tr>
-          <% end %>
-          </tbody>
-        </table>
-    </div>
-  </div>
-</main>
+      
+      
+      
+      </div>
+      </div>
+      </div>
+      </main>
+  <!--投稿フォーム-->
+
+
+
+
+
+
+
+
+

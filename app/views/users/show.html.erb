@@ -1,34 +1,18 @@
-<main>
-  <div class="main-content">
-    <div class="icom_post">
-      <h2>Usre info</h2>
-    </div>
-    <div class="posts_list">
-      <h2>Books</h2>
-      <table>
-          <thead>
-            <tr>
-              <th>&nbsp;</th>
-              <th>name</th>
-              <th>Opinion</th>
-            </tr>
-          </thead>
-          <tbody>
-          <% @users.each do |user| %>
-          	<tr> 
-          	<td>
-          	<%= user.profile_image_id %>
-          	</td>
-          	<td>
-          	<p>link=>booksh</p>
-          	</td>
-          	<td>
-            <p>booktext</p>
-            </td>
-          	</tr>
-          <% end %>
-          </tbody>
-        </table>
-    </div>
-  </div>
-</main>
+ <main>
+ <p id="notice">Welcome! You have signed up successfully.</p>
+  <div class='container px-5 px-sm-0'>
+   <div class='row'>
+    <div class='col-md-3'>
+      <h2>User info</h2>
+      <table class='table'>
+       <tr>image</tr>
+       <tr>
+  	     <th>name</th>
+  	     <th>maru</th>
+       </tr>
+       <tr>
+    	  <th>introduction</th>
+    	  <th>yorosiku</th>
+       </tr>
+      </table>
+      
