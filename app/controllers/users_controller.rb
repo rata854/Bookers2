@@ -3,13 +3,17 @@ class UsersController < ApplicationController
   
   def index
     @users = User.all
-    @user = current_user.id
     @books = Book.all
     @book = Book.new
   end
   
-  def new
+  def show
+    @user = User.find(params[:id])
+    @books = Book.all
+    @book = Book.new
   end
+
+
   
   def create
     @book = Book.new(book_params)
@@ -17,13 +21,11 @@ class UsersController < ApplicationController
     if @book.save
     redirect_to book_path(@book.id), notice:"successfully saved"
     else
-      render :books_path
+      render "books/index"
     end
   end
   
-  def show
-    @user = User.find(params[:id])
-  end
+
   
   def edit
     @user = User.find(params[:id])

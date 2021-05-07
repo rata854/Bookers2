@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   
   def index
+    @users = User.all
     @books = Book.all
     @book = Book.new
   end
@@ -14,7 +15,7 @@ class BooksController < ApplicationController
     if @book.save
     redirect_to book_path(@book.id), notice:"successfully saved"
     else
-      render template: "books/index"
+      render "books/index"
     end
   end
 
