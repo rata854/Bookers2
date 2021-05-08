@@ -10,7 +10,7 @@
      </div>
      <div class="form-group">
        <label for="user_image">Image</label>
-       <%= attachment_image_tag @user, :profile_image, fallback: "default.jpg", id: "img_prev", style: "height: 50px; width:50px;" %><br>
+       <br><%= attachment_image_tag @user, :profile_image, fallback: "default.jpg", id: "img_prev", style: "height: 50px; width:50px;" %>
        <%= f.attachment_field :profile_image, class: "form-control-file user_image" %>
      </div>
      <div class="form-group">
