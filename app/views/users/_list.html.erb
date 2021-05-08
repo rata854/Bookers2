@@ -1,6 +1,6 @@
  <h2>User info</h2>
     <table class='table'>
-      <tr><%= current_user.profile_image %></tr>
+      <tr><%= attachment_image_tag current_user, :profile_image, :fill, 50, 50, format: 'jpeg' %></tr>
       <tr>
    	    <th>name</th>
    	    <th><%= current_user.name %></th>
@@ -33,3 +33,5 @@
         <%= f.submit 'Create Book', class: "btn btn-success" %>
       </div>
     <% end %>
+    
+    
