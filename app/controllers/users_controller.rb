@@ -24,8 +24,6 @@ class UsersController < ApplicationController
     end
   end
   
-
-  
   def edit
     @user = User.find(params[:id])
   end
@@ -38,14 +36,6 @@ class UsersController < ApplicationController
       render :edit
     end
   end
-  
-  def destroy
-    @user = User.find(params[:id])
-    @user.destroy
-    redirect_to books_path
-  end
-  
-  
   
   def user_params
      params.require(:user).permit(:name, :introduction, :profile_image)
