@@ -6,7 +6,9 @@ class BooksController < ApplicationController
     @book = Book.new
   end
   
-  def new
+  def show
+    @book = Book.find(params[:id])
+    @user = User.find(params[:id])
   end
   
   def create
@@ -19,12 +21,6 @@ class BooksController < ApplicationController
       render "books/index"
     end
   end
-
-  def show
-    @books = Book.all
-    @book = Book.find(params[:id])
-  end
-  
 
   def edit
     @book = Book.find(params[:id])
