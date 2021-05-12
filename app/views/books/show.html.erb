@@ -33,12 +33,10 @@
       </tr>
     </table>
     
+      <%= link_to  edit_user_path(@book2.user), class: 'btn btn-outline-secondary btn-block' do %>
+       <i class="fas fa-user-cog"></i>
+      <% end %>
     
-  <%= link_to  edit_user_path(current_user.id), class: 'btn btn-outline-secondary btn-block' do %>
-    <i class="fas fa-user-cog"></i>
-   <% end %>
-      
-      
 　 <h2>New book</h2>
     <%= form_with model:@book, local:true do |f| %>
       <div class="form-group">
@@ -75,12 +73,12 @@
         <td><%= @book2.body %></td>
         <td>
          <% if @book2.user == current_user %>
-           <%= link_to "Edit",  edit_book_path(@book2) , class: "btn btn-sm btn-success" %>
+           <%= link_to "Edit",  edit_book_path(@book2.id) , class: "btn btn-sm btn-success" %>
          <% end %>
         </td>
         <td>
          <% if @book2.user == current_user %>
-          <%= link_to "Destroy", book_path(@book2), method: :delete, data: { confirm: '本当に消しますか？'}, class: "btn btn-sm btn-danger" %>
+          <%= link_to "Destroy", book_path(@book2.id), method: :delete, data: { confirm: '本当に消しますか？'}, class: "btn btn-sm btn-danger" %>
          <% end %>
         </td>
       </tr>
