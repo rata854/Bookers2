@@ -10,7 +10,7 @@ class BooksController < ApplicationController
   
   def show
     @book = Book.new
-    @book2 = Book.find(params[:id])
+    @book_find = Book.find(params[:id])
   end
   
   def create
