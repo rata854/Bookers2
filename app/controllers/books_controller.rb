@@ -2,11 +2,8 @@ class BooksController < ApplicationController
   before_action :authenticate_user!
   before_action :ensure_correct_user, {only: [:edit, :update]}
   
-  def index
-    @users = User.all
-    @books = Book.all
-    @book = Book.new
-  end
+  include Index
+  before_action :index
   
   def show
     @book = Book.new
